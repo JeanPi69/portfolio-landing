@@ -59,6 +59,6 @@ instrumentation.ts      # Loads env from .env/ subfolder
 
 ## Deployment
 
-Deploy to [Vercel](https://vercel.com). Add `RESEND_API_KEY` in project environment variables.
+Add `RESEND_API_KEY` in project environment variables.
 
 > Once your domain is verified in Resend, update the `to` address in `app/api/contact/route.ts` to your preferred inbox.
