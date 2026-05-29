@@ -6,10 +6,11 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import PageWrapper from "./components/PageWrapper";
 
 export default function Home() {
   return (
-    <>
+    <PageWrapper>
       <NavBar />
       <main>
         <HeroSection />
@@ -20,6 +21,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-    </>
+    </PageWrapper>
   );
 }

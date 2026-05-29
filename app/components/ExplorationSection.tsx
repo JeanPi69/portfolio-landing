@@ -1,13 +1,15 @@
+import FadeIn, { StaggerContainer, StaggerItem } from "./animations/FadeIn";
+
 const explorations = [
   {
     icon: "view_in_ar",
-    title: "Web3 & Rust",
+    title: "React & Next.js",
     description:
-      "Exploring smart contract development and Solana ecosystem.",
+      "Learning modern React ecosystem to expand opportunities in global frontend roles.",
   },
   {
-    icon: "memory",
-    title: "Machine Learning",
+    icon: "phone_android",
+    title: "Flutter",
     description:
       "Integrating LLMs and vector databases into modern applications.",
   },
@@ -30,34 +32,33 @@ export default function ExplorationSection() {
     <section className="py-[120px] bg-surface-container-low border-t border-outline-variant">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="flex flex-col gap-4 mb-16">
-          <h2
-            className="font-[family-name:var(--font-space-grotesk)] font-semibold text-on-background text-[2.25rem] leading-[1.2]"
-          >
-            Current Explorations
-          </h2>
-          <div className="h-px w-24 bg-primary" />
-        </div>
+        <FadeIn>
+          <div className="flex flex-col gap-4 mb-16">
+            <h2 className="font-[family-name:var(--font-space-grotesk)] font-semibold text-on-background text-[2.25rem] leading-[1.2]">
+              Current Explorations
+            </h2>
+            <div className="h-px w-24 bg-primary" />
+          </div>
+        </FadeIn>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6" delayStart={0.1}>
           {explorations.map((item) => (
-            <div
-              key={item.title}
-              className="border border-outline-variant bg-surface p-6 flex flex-col items-center text-center gap-4 hover:border-primary transition-colors"
-            >
-              <span className="material-symbols-outlined text-4xl text-primary">
-                {item.icon}
-              </span>
-              <h3 className="font-[family-name:var(--font-space-grotesk)] font-semibold text-on-background text-lg">
-                {item.title}
-              </h3>
-              <p className="text-on-surface-variant text-sm leading-relaxed">
-                {item.description}
-              </p>
-            </div>
+            <StaggerItem key={item.title}>
+              <div className="border border-outline-variant bg-surface p-6 flex flex-col items-center text-center gap-4 hover:border-primary transition-colors h-full">
+                <span className="material-symbols-outlined text-4xl text-primary">
+                  {item.icon}
+                </span>
+                <h3 className="font-[family-name:var(--font-space-grotesk)] font-semibold text-on-background text-lg">
+                  {item.title}
+                </h3>
+                <p className="text-on-surface-variant text-sm leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

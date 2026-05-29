@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
+import Providers from "./components/Providers";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -17,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "DEV_ARCHITECT | Software Engineer Portfolio",
   description:
-    "Full-stack software engineer specializing in distributed systems, cloud architecture, and high-performance applications.",
+    "Frontend Developer building scalable web and mobile applications with Angular and Ionic.",
 };
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased dark`}
+      className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
         <link
@@ -37,7 +38,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-on-background">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
