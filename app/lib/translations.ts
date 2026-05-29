@@ -128,6 +128,7 @@ export const translations = {
       errorEmail:   "Email required",
       errorEmailInvalid: "Invalid email address",
       errorMessage: "Message required",
+      errorSend: "Transmission failed. Try again."
     },
     footer: {
       copyright: "© 2026 ARCHITECT_OS. BUILT FOR PRECISION.",
@@ -225,6 +226,7 @@ export const translations = {
       errorEmail:   "Email requerido",
       errorEmailInvalid: "Dirección de email inválida",
       errorMessage: "Mensaje requerido",
+      errorSend: "Error al enviar el mensaje. Inténtalo nuevamente."
     },
     footer: {
       copyright: "© 2026 ARCHITECT_OS. CONSTRUIDO CON PRECISIÓN.",
