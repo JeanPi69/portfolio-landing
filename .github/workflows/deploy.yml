@@ -3,7 +3,7 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -20,8 +20,8 @@ jobs:
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             cd /var/www/landing-portfolio
-            git pull origin main
-            npm ci --omit=dev
+            git pull origin master
+            npm ci
             npm run build
             pm2 restart landing-portfolio || pm2 start npm --name "landing-portfolio" -- start
             pm2 save
