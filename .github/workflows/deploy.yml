@@ -23,5 +23,5 @@ jobs:
             git pull origin master
             npm ci
             npm run build
-            pm2 restart landing-portfolio || pm2 start npm --name "landing-portfolio" -- start
+            pm2 restart landing-portfolio --update-env
             pm2 save

@@ -169,25 +169,63 @@ export const translations = {
       ],
     },
     experience: {
-      sectionTitle: "Historial de Ejecución",
+      sectionTitle: "Execution History",
       jobs: [
         {
           title:       "Desarrollador Frontend",
           company:     "@ Billex",
-          period:      "2023 — PRESENTE",
-          description: "Diseñé y desplegué infraestructura de microservicios que atiende más de 2M de solicitudes diarias activas. Reduje la latencia un 40% mediante estrategias de caché con Redis y optimización de consultas.",
+          period:      "Sep 2023 — PRESENTE",
+          description: "Desarrollar y mantener un sistema CRM fintech con múltiples módulos operativos para usuarios internos.",
           bullets: [
-            "Migré arquitectura monolítica a microservicios basados en Go.",
-            "Implementé pipelines CI/CD robustos reduciendo el tiempo de despliegue un 60%.",
+            "Desarrollé y mejoré módulos para operaciones, ejecutivos, proveedores y flujos de trabajo contables.",
+            "Reduje el tiempo promedio de procesamiento operativo de 55 a 35 minutos optimizando los flujos de usuario y el rendimiento del frontend.",
+            "Implementé sistemas de control de acceso y permisos basados ​​en roles para diferentes perfiles de usuario.",
+            "Desarrollé una aplicación móvil con Ionic y Angular para usuarios de la plataforma.",
+            "Integré API REST con autenticación, gestión de sesiones y validación de permisos.",
+            "Gestioné flujos de datos reactivos con RxJS.",
+            "Brindé soporte técnico y mejoras continuas basadas en los comentarios de los usuarios."
           ],
         },
         {
-          title:       "Desarrollador Full Stack",
-          company:     "@ Cipher Systems",
-          period:      "2018 — 2021",
-          description: "Desarrollé funciones principales para un panel de visualización de datos empresariales con React y D3.js. Gestioné la integración de API backend con Node.js y PostgreSQL.",
-          bullets:     [],
+          title:       "Desarrollador de aplicaciones móviles (Freelance)",
+          company:     "@ Aplicación para congreso de dermatología - Centroamérica",
+          period:      "2025",
+          description: "Desarrollé una aplicación móvil para una conferencia internacional de dermatología.",
+          bullets:     [
+            "Implementé la programación de eventos y la gestión de ponentes.",
+            "Integré Google Maps para el seguimiento de la ubicación de los eventos.",
+            "Desarrollé funciones para compartir archivos y fotos entre usuarios.",
+            "Diseñé una experiencia móvil intuitiva utilizando Ionic y Angular."
+          ],
         },
+        {
+          title:      "Desarrollador Web (Freelance)",
+          company:    "@ Aplicación para congresos de dermatología - Lima",
+          period:     "2025",
+          description: "Creé una aplicación web para un congreso de dermatología en Lima, Perú.",
+          bullets:    [
+            "Desarrollé una aplicación interactiva de cuestionarios en tiempo real (al estilo Kahoot) para la participación del público en directo.",
+            "Creé una plataforma web que muestra galerías de fotos dinámicas utilizando contenido basado en API."
+          ]
+        },
+        {
+          title:       "Gerente General",
+          company:     "@ Distribuidora Xavi S.A.C.",
+          period:      "2020 — 2022",
+          description: "Gestioné las operaciones de una empresa de distribución de snacks durante el período de la COVID-19.",
+          bullets:     [
+            "Supervisó la logística, los proveedores y las operaciones diarias.",
+            "Coordinó los procesos de distribución para los mercados mayoristas.",
+            "Mantuvo la continuidad del negocio durante un período crítico."
+          ]
+        },
+        {
+          "title":       "Becario desarrollador frontend",
+          "company":     "@ Billex",
+          "period":      "2021 - 2023",
+          "description": "Comencé como becario de desarrollo frontend, contribuyendo a los módulos de CRM y adquiriendo experiencia en Angular e integración de API.",
+          "bullets":     []
+        }
       ],
     },
     projects: {
