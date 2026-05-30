@@ -16,7 +16,7 @@ jobs:
         with:
           host: 72.61.62.91
           username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
             cd /var/www/landing-portfolio
