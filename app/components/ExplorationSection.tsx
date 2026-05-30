@@ -9,21 +9,21 @@ const explorations = [
   },
   {
     icon: "phone_android",
-    title: "Flutter",
+    title: "Frontend Testing",
     description:
-      "Integrating LLMs and vector databases into modern applications.",
+      "Learning Jest and Cypress to improve application reliability, maintainability, and deployment confidence.",
   },
   {
     icon: "architecture",
-    title: "Event-Driven Arch",
+    title: "AI-Powered Applications",
     description:
-      "Deep diving into Apache Kafka and stream processing patterns.",
+      "Exploring LLM integrations, AI agents, and intelligent workflows for modern business applications.",
   },
   {
     icon: "speed",
-    title: "WebAssembly",
+    title: "Software Architecture",
     description:
-      "Evaluating WASM for high-performance frontend modules.",
+      "Improving application scalability through modular design, clean architecture, and maintainable frontend patterns.",
   },
 ];
 

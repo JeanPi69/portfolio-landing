@@ -7,7 +7,13 @@ import ProjectDetailOverlay from "./ProjectDetailOverlay";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lib/translations";
 
-const filters = ["All", "React", "Go", "Python", "Infrastructure", "Typescript", "Angular"];
+const filters = [
+  "All",
+  "React",
+  "NextJS",
+  "TypeScript",
+  "Angular",
+];
 
 export type Project = {
   title: string;
@@ -27,52 +33,119 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "DataStream Protocol",
-    category: "Data Infrastructure",
+    title: "Alta Montaña ERP",
+    category: "Enterprise Resource Planning",
     description:
-      "High-throughput data ingestion engine capable of processing 10k events/sec. Built with Go and Apache Kafka for real-time analytics processing.",
+      "Business management platform for bicycle sales, workshop operations, inventory, payroll, and financial administration.",
     fullDescription:
-      "The architecture leverages a partitioned log model with consumer groups, providing durable, ordered message delivery at massive scale. The system is designed for zero-downtime deployments using rolling upgrades and supports exactly-once semantics via idempotent producers.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCgQgfE7UBcr0TyhrfWD3u8pXeNLbZQy6izvBJHbJyQMWWxnvSjwohvmoXVGgk7k07t9_9u_uG0Mg444tSC76vDseT70Q4WgKErkwSSe32nx_OraiESjnaG4eChHXZ3UhPcDDh8kslSH3AMfDcLmbykk_m2iK4OhAU8OD65_g54A05VlkHKekWUX4sdxkrjOIGj8lWemP9w33BQFufpOtiT4640nv1ggv1dGezo66DwMyhpFLamGmVcRgWyxtnYTkx2LQhBf-9CiK8",
-    imageAlt: "Abstract data visualization showing glowing network nodes on dark background",
-    tags: ["Go", "Kafka", "gRPC"],
-    filter: ["Go", "Infrastructure"],
+      "Alta Montaña ERP is a comprehensive business management platform developed for a bicycle sales and maintenance company. The system centralizes critical business operations including payroll management, attendance tracking, salary deductions, inventory control, workshop management, sales operations, financial records, and electronic invoicing. The platform was designed to replace disconnected manual processes with a unified solution that improves operational visibility, streamlines workflows, and provides better control across multiple business areas.",
+    image: "/projects/alta-montana-erp.webp",
+    imageAlt:
+      "ERP dashboard for bicycle sales, workshop operations, inventory, payroll, and financial management.",
+    tags: [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "REST API",
+      "ERP",
+      "Business Management",
+    ],
+    filter: ["Angular", "TypeScript"],
     specs: [
-      { icon: "bolt", title: "Throughput", description: "10k+ events/sec with consistent sub-10ms latency." },
-      { icon: "security", title: "Reliability", description: "At-least-once delivery with idempotent producer support." },
-      { icon: "network_node", title: "Scalability", description: "Horizontal partition scaling across distributed brokers." },
-      { icon: "monitoring", title: "Observability", description: "Prometheus metrics and distributed tracing built in." },
+      {
+        icon: "user_attributes",
+        title: "Human Resources",
+        description:
+          "Payroll management, attendance tracking, lateness deductions, and employee administration.",
+      },
+      {
+        icon: "package",
+        title: "Inventory Control",
+        description:
+          "Stock management for bicycles, spare parts, and workshop supplies.",
+      },
+      {
+        icon: "build",
+        title: "Workshop Operations",
+        description:
+          "Service orders, maintenance tracking, and workshop workflow management.",
+      },
+      {
+        icon: "receipt",
+        title: "Sales & Billing",
+        description:
+          "Electronic invoicing, sales receipts, notes of sale, and financial transaction management.",
+      },
     ],
     githubUrl: "#",
     liveUrl: "#",
-    status: "Production Ready",
-    version: "v1.3.0",
+    status: "Beta - Pending Client Approval",
+    version: "v1.0.0",
   },
   {
-    title: "Nexus UI Framework",
-    category: "Frontend Architecture",
+    title: "Gestores Empresas",
+
+    category: "Business Services Platform",
+
     description:
-      "Component library built for internal tooling. Implements strict brutalist design principles while maintaining accessibility standards.",
+      "Corporate website developed for a business consulting and financial advisory company, focused on service presentation, lead generation, and digital presence.",
+
     fullDescription:
-      "Built as a headless-first system with optional styled layers, enabling teams to adopt incrementally. Every component ships with ARIA roles, keyboard navigation, and focus management baked in — meeting WCAG 2.1 AA standards out of the box.",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBqO561mWFuB5pmet0onZdQh740Cp2edAbLgFCTSqlDGkS0s6fjtkdYkmtCr-cGqQXdqc4TetvwPnAFUwX86_pknXhMoe-T4uZ_0-KNhz3ElyoxgKo1iTWxpukqCIlrf7zKWrkcFN_0Qf3zzlONzw0wm4cYmkTFa5xuZqMURmwsA-6uFHH68WhnEKPYQ7vB2As_PwCg2dFi58b8VdDCTQx3AgFcfOHXhxMAjMb1YRTa66gQU2vbTyNRBw3zENBYbjOYH4ikLTeuRic",
-    imageAlt: "Minimalist dark dashboard interface showing server metrics",
-    tags: ["React", "TypeScript", "Tailwind"],
-    filter: ["React"],
-    specs: [
-      { icon: "accessibility_new", title: "Accessibility", description: "WCAG 2.1 AA compliant with full keyboard navigation." },
-      { icon: "view_module", title: "Modularity", description: "Composable headless-first component architecture." },
-      { icon: "speed", title: "Performance", description: "Tree-shakable exports, minimal runtime overhead." },
-      { icon: "auto_stories", title: "Documentation", description: "Full Storybook coverage with live playground." },
+      "Gestores Empresas is a corporate website developed for a company specialized in business consulting, financial advisory, accounting services, and tax management. The platform was designed to strengthen the company's digital presence, clearly communicate its services, and improve customer acquisition through a modern and responsive user experience. The project focused on delivering a professional corporate identity while optimizing accessibility, responsiveness, and conversion-oriented navigation.",
+
+    image: "/projects/gestores-empresas.webp",
+
+    imageAlt:
+      "Corporate website for business consulting, accounting, and financial advisory services.",
+
+    tags: [
+      "NextJS",
+      "TypeScript",
+      "React",
+      "Responsive Design",
+      "SEO",
+      "Business Website",
+      "Corporate Platform"
     ],
+
+    filter: ["NextJS", "React", "TypeScript"],
+
+    specs: [
+      {
+        icon: "corporate_fare",
+        title: "Corporate Presence",
+        description:
+          "Professional digital platform designed to showcase business and financial advisory services.",
+      },
+      {
+        icon: "user_attributes",
+        title: "Lead Generation",
+        description:
+          "Structured service presentation and contact flows focused on customer acquisition.",
+      },
+      {
+        icon: "monitor",
+        title: "Responsive Experience",
+        description:
+          "Optimized user experience across desktop, tablet, and mobile devices.",
+      },
+      {
+        icon: "search",
+        title: "SEO Foundation",
+        description:
+          "Built with search engine visibility and accessibility best practices in mind.",
+      },
+    ],
+
     githubUrl: "#",
-    liveUrl: "#",
-    status: "Stable",
-    version: "v2.1.4",
+
+    liveUrl: "https://gestoresempresas.com/",
+
+    status: "Production",
+
+    version: "v1.0.0",
   },
-  {
+  /* {
     title: "Cloud Provisioning CLI",
     category: "DevOps & Automation",
     description:
@@ -85,10 +158,26 @@ const projects: Project[] = [
     tags: ["Python", "AWS", "Docker"],
     filter: ["Python", "Infrastructure"],
     specs: [
-      { icon: "terminal", title: "Automation", description: "Single-command provisioning for full VPC and ECS stacks." },
-      { icon: "lock", title: "Security", description: "IAM least-privilege enforcement on all generated roles." },
-      { icon: "cloud_upload", title: "Portability", description: "Multi-region and multi-account deployment support." },
-      { icon: "integration_instructions", title: "CI/CD Ready", description: "Structured JSON output for pipeline integration." },
+      {
+        icon: "terminal",
+        title: "Automation",
+        description: "Single-command provisioning for full VPC and ECS stacks.",
+      },
+      {
+        icon: "lock",
+        title: "Security",
+        description: "IAM least-privilege enforcement on all generated roles.",
+      },
+      {
+        icon: "cloud_upload",
+        title: "Portability",
+        description: "Multi-region and multi-account deployment support.",
+      },
+      {
+        icon: "integration_instructions",
+        title: "CI/CD Ready",
+        description: "Structured JSON output for pipeline integration.",
+      },
     ],
     githubUrl: "#",
     liveUrl: "#",
@@ -108,16 +197,32 @@ const projects: Project[] = [
     tags: ["Node.js", "PostgreSQL", "Redis"],
     filter: ["Infrastructure"],
     specs: [
-      { icon: "verified", title: "Data Integrity", description: "ACID compliance across distributed PostgreSQL nodes." },
-      { icon: "security", title: "Security", description: "Cryptographic audit trail with tamper-evident logs." },
-      { icon: "bolt", title: "Performance", description: "Sub-second query response under peak transaction load." },
-      { icon: "uptime", title: "Availability", description: "99.99% SLA with automated failover and replication." },
+      {
+        icon: "verified",
+        title: "Data Integrity",
+        description: "ACID compliance across distributed PostgreSQL nodes.",
+      },
+      {
+        icon: "security",
+        title: "Security",
+        description: "Cryptographic audit trail with tamper-evident logs.",
+      },
+      {
+        icon: "bolt",
+        title: "Performance",
+        description: "Sub-second query response under peak transaction load.",
+      },
+      {
+        icon: "uptime",
+        title: "Availability",
+        description: "99.99% SLA with automated failover and replication.",
+      },
     ],
     githubUrl: "#",
     liveUrl: "#",
     status: "Production Ready",
     version: "v3.0.1",
-  },
+  }, */
 ];
 
 export default function ProjectsSection() {
@@ -174,7 +279,8 @@ export default function ProjectsSection() {
               transition={{ duration: 0.3 }}
               className="flex flex-col items-center justify-center min-h-[500px] border border-outline-variant bg-surface-container-low/50 relative overflow-hidden group mb-12"
               style={{
-                backgroundImage: "radial-gradient(#86948a 1px, transparent 1px)",
+                backgroundImage:
+                  "radial-gradient(#86948a 1px, transparent 1px)",
                 backgroundSize: "24px 24px",
               }}
             >
@@ -185,7 +291,8 @@ export default function ProjectsSection() {
                     className="material-symbols-outlined text-surface-variant group-hover:text-outline transition-colors duration-500"
                     style={{
                       fontSize: "120px",
-                      fontVariationSettings: "'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48",
+                      fontVariationSettings:
+                        "'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48",
                     }}
                   >
                     database_off
@@ -193,7 +300,11 @@ export default function ProjectsSection() {
                   <motion.div
                     className="absolute left-0 w-full h-[2px] bg-primary/50 blur-[1px]"
                     animate={{ top: ["0%", "100%", "0%"] }}
-                    transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
+                    transition={{
+                      duration: 3,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    }}
                   />
                 </div>
 
@@ -205,33 +316,40 @@ export default function ProjectsSection() {
                   <span className="font-[family-name:var(--font-space-grotesk)] text-sm text-primary tracking-widest">
                     tag=&quot;{activeFilter}&quot;
                   </span>{" "}
-                  yielded no architectural constructs within the current repository parameters.
+                  yielded no architectural constructs within the current
+                  repository parameters.
                 </p>
 
                 <button
                   onClick={() => setActiveFilter("All")}
                   className="border border-outline-variant text-on-surface px-6 py-3 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2"
                 >
-                  <span className="material-symbols-outlined text-[18px]">refresh</span>
+                  <span className="material-symbols-outlined text-[18px]">
+                    refresh
+                  </span>
                   {t.resetQuery}
                 </button>
               </div>
 
               {/* Technical decoration */}
               <div className="absolute bottom-4 left-4 font-[family-name:var(--font-space-grotesk)] text-[10px] text-outline-variant opacity-50">
-                {t.statusLabel}<br />
+                {t.statusLabel}
+                <br />
                 EXEC_TIME: 0.042ms
               </div>
             </motion.div>
           ) : (
             <motion.div
-              key="grid"
+              key={`grid-${activeFilter}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <StaggerContainer className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12" delayStart={0.05}>
+              <StaggerContainer
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12"
+                delayStart={0.05}
+              >
                 {filtered.map((project) => (
                   <StaggerItem key={project.title}>
                     <div
@@ -277,7 +395,9 @@ export default function ProjectsSection() {
                             onClick={(e) => e.stopPropagation()}
                             className="border border-primary text-primary px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-colors inline-flex items-center gap-2"
                           >
-                            <span className="material-symbols-outlined text-sm">open_in_new</span>
+                            <span className="material-symbols-outlined text-sm">
+                              open_in_new
+                            </span>
                             {t.liveDeploy}
                           </a>
                           <a
@@ -285,7 +405,9 @@ export default function ProjectsSection() {
                             onClick={(e) => e.stopPropagation()}
                             className="border border-outline-variant text-on-background px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-on-background transition-colors inline-flex items-center gap-2"
                           >
-                            <span className="material-symbols-outlined text-sm">code</span>
+                            <span className="material-symbols-outlined text-sm">
+                              code
+                            </span>
                             {t.source}
                           </a>
                         </div>
@@ -303,7 +425,9 @@ export default function ProjectsSection() {
           <div className="flex justify-center">
             <button className="border border-outline-variant text-on-background px-8 py-4 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2">
               {t.loadMore}
-              <span className="material-symbols-outlined text-sm">expand_more</span>
+              <span className="material-symbols-outlined text-sm">
+                expand_more
+              </span>
             </button>
           </div>
         )}

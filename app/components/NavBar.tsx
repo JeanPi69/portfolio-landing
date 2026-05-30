@@ -71,10 +71,10 @@ export default function NavBar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 border-b border-slate-800 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 border-b border-outline-variant transition-all duration-300 ${
           scrolled
-            ? "bg-[#0a0d0e]/95 backdrop-blur-md"
-            : "bg-[#0a0d0e]/80 backdrop-blur-sm"
+            ? "bg-surface-container-lowest/95 backdrop-blur-md"
+            : "bg-surface-container-lowest/80 backdrop-blur-sm"
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between gap-8">
@@ -174,7 +174,7 @@ export default function NavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 bg-[#0a0d0e]/98 backdrop-blur-sm flex flex-col px-8 pt-10 gap-6"
+            className="fixed inset-0 top-16 z-40 bg-surface-container-lowest/98 backdrop-blur-sm flex flex-col px-8 pt-10 gap-6"
           >
             {navLinks.map((link) => {
               const id = link.href.slice(1);

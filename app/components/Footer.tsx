@@ -22,7 +22,7 @@ export default function Footer() {
 
   return (
     <FadeIn>
-      <footer className="bg-[#0a0d0e] w-full py-12 border-t border-slate-800">
+      <footer className="bg-surface-container-lowest w-full py-12 border-t border-outline-variant">
         <div className="flex flex-col md:flex-row justify-between items-center px-6 lg:px-12 max-w-[1280px] mx-auto gap-6">
           <p className="font-[family-name:var(--font-space-grotesk)] text-xs tracking-widest uppercase text-primary">
             {t.copyright}

@@ -8,7 +8,7 @@ const skillIcons = ["desktop_windows", "dns", "build"];
 const skillLists = [
   ["Angular", "Ionic", "TypeScript", "Javascript", "RxJS", "HTML5", "CSS/SCSS"],
   ["Node.js", "PostgreSQL", "Express.js", "Rest API"],
-  ["Git", "Agile", "Github Copilot", "Google Stitch"],
+  ["Git", "Agile", "Github Copilot", "Google Stitch", "Github Actions", "Claude Code"],
 ];
 
 export default function SkillsSection() {
