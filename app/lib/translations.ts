@@ -102,6 +102,71 @@ export const translations = {
       statusLabel:     "STATUS: NULL_SET",
       liveDeploy:      "Live Deploy",
       source:          "Source",
+      projectList: [
+        {
+          title:           "Alta Montaña ERP",
+          category:        "Enterprise Resource Planning",
+          description:     "Business management platform for bicycle sales, workshop operations, inventory, payroll, and financial administration.",
+          fullDescription: "Alta Montaña ERP is a comprehensive business management platform developed for a bicycle sales and maintenance company. The system centralizes critical business operations including payroll management, attendance tracking, salary deductions, inventory control, workshop management, sales operations, financial records, and electronic invoicing. The platform was designed to replace disconnected manual processes with a unified solution that improves operational visibility, streamlines workflows, and provides better control across multiple business areas.",
+          imageAlt:        "ERP dashboard for bicycle sales, workshop operations, inventory, payroll, and financial management.",
+          specs: [
+            { title: "Human Resources",    description: "Payroll management, attendance tracking, lateness deductions, and employee administration." },
+            { title: "Inventory Control",  description: "Stock management for bicycles, spare parts, and workshop supplies." },
+            { title: "Workshop Operations", description: "Service orders, maintenance tracking, and workshop workflow management." },
+            { title: "Sales & Billing",    description: "Electronic invoicing, sales receipts, notes of sale, and financial transaction management." },
+          ],
+          status: "Beta - Pending Client Approval",
+        },
+        {
+          title:           "Gestores Empresas",
+          category:        "Business Services Platform",
+          description:     "Corporate website developed for a business consulting and financial advisory company, focused on service presentation, lead generation, and digital presence.",
+          fullDescription: "Gestores Empresas is a corporate website developed for a company specialized in business consulting, financial advisory, accounting services, and tax management. The platform was designed to strengthen the company's digital presence, clearly communicate its services, and improve customer acquisition through a modern and responsive user experience. The project focused on delivering a professional corporate identity while optimizing accessibility, responsiveness, and conversion-oriented navigation.",
+          imageAlt:        "Corporate website for business consulting, accounting, and financial advisory services.",
+          specs: [
+            { title: "Corporate Presence",    description: "Professional digital platform designed to showcase business and financial advisory services." },
+            { title: "Lead Generation",       description: "Structured service presentation and contact flows focused on customer acquisition." },
+            { title: "Responsive Experience", description: "Optimized user experience across desktop, tablet, and mobile devices." },
+            { title: "SEO Foundation",        description: "Built with search engine visibility and accessibility best practices in mind." },
+          ],
+          status: "Production",
+        },
+        {
+          title:           "Angular CRM Platform",
+          category:        "CRM Platform",
+          description:     "Modern CRM application built with Angular 20, featuring authentication, role-based access control, Kanban workflows, dashboards, and reactive state management.",
+          fullDescription: "Mini Personal CRM is a portfolio project developed to showcase modern Angular architecture and frontend engineering practices. The application centralizes customer management, sales tracking, task organization, and user administration within a responsive business-oriented interface. The project focuses on scalability, maintainability, and modern Angular patterns, including standalone components, signals, lazy loading, role-based authentication, and reactive data flows using RxJS.",
+          imageAlt:        "Angular CRM dashboard with contacts, Kanban sales pipeline, analytics, authentication, and role-based access control.",
+          specs: [
+            { title: "Authentication",       description: "JWT authentication, route guards, HTTP interceptors, and role-based access control." },
+            { title: "CRM Workflows",        description: "Contacts, deals, tasks, Kanban pipelines, and business workflow management." },
+            { title: "Modern Angular",       description: "Built with Angular 20 using Signals, Standalone Components, OnPush strategy, and lazy loading." },
+            { title: "Analytics Dashboard",  description: "Interactive charts and business metrics using Chart.js and reactive data flows." },
+          ],
+          status: "Live Demo",
+        },
+      ],
+    },
+    explorations: {
+      sectionTitle: "Current Explorations",
+      items: [
+        {
+          title: "React & Next.js",
+          description: "Learning modern React ecosystem to expand opportunities in global frontend roles.",
+        },
+        {
+          title: "Frontend Testing",
+          description: "Learning Jest and Cypress to improve application reliability, maintainability, and deployment confidence.",
+        },
+        {
+          title: "AI-Powered Applications",
+          description: "Exploring LLM integrations, AI agents, and intelligent workflows for modern business applications.",
+        },
+        {
+          title: "Software Architecture",
+          description: "Improving application scalability through modular design, clean architecture, and maintainable frontend patterns.",
+        },
+      ],
     },
     contact: {
       sectionTitle: "Establish Connection",
@@ -238,6 +303,71 @@ export const translations = {
       statusLabel:     "ESTADO: SIN_RESULTADOS",
       liveDeploy:      "Ver En Vivo",
       source:          "Código",
+      projectList: [
+        {
+          title:           "Alta Montaña ERP",
+          category:        "Planificación de Recursos Empresariales",
+          description:     "Plataforma de gestión empresarial para venta de bicicletas, operaciones de taller, inventario, nómina y administración financiera.",
+          fullDescription: "Alta Montaña ERP es una plataforma integral de gestión empresarial desarrollada para una empresa de venta y mantenimiento de bicicletas. El sistema centraliza operaciones críticas de negocio que incluyen gestión de nómina, control de asistencia, deducciones salariales, control de inventario, gestión de taller, operaciones de ventas, registros financieros y facturación electrónica. La plataforma fue diseñada para reemplazar procesos manuales desconectados con una solución unificada que mejora la visibilidad operativa, optimiza los flujos de trabajo y proporciona mejor control en múltiples áreas de negocio.",
+          imageAlt:        "Panel de ERP para venta de bicicletas, operaciones de taller, inventario, nómina y gestión financiera.",
+          specs: [
+            { title: "Recursos Humanos",      description: "Gestión de nómina, control de asistencia, deducciones por tardanza y administración de empleados." },
+            { title: "Control de Inventario", description: "Gestión de stock para bicicletas, repuestos y suministros de taller." },
+            { title: "Operaciones de Taller", description: "Órdenes de servicio, seguimiento de mantenimiento y gestión del flujo de trabajo del taller." },
+            { title: "Ventas y Facturación",  description: "Facturación electrónica, boletas de venta, notas de venta y gestión de transacciones financieras." },
+          ],
+          status: "Beta - Pendiente de Aprobación del Cliente",
+        },
+        {
+          title:           "Gestores Empresas",
+          category:        "Plataforma de Servicios Empresariales",
+          description:     "Sitio web corporativo desarrollado para una empresa de consultoría empresarial y asesoría financiera, enfocado en presentación de servicios, generación de leads y presencia digital.",
+          fullDescription: "Gestores Empresas es un sitio web corporativo desarrollado para una empresa especializada en consultoría empresarial, asesoría financiera, servicios contables y gestión tributaria. La plataforma fue diseñada para fortalecer la presencia digital de la empresa, comunicar claramente sus servicios y mejorar la captación de clientes mediante una experiencia de usuario moderna y responsiva. El proyecto se centró en entregar una identidad corporativa profesional optimizando la accesibilidad, la responsividad y la navegación orientada a la conversión.",
+          imageAlt:        "Sitio web corporativo para consultoría empresarial, contabilidad y servicios de asesoría financiera.",
+          specs: [
+            { title: "Presencia Corporativa",   description: "Plataforma digital profesional diseñada para exhibir servicios empresariales y de asesoría financiera." },
+            { title: "Generación de Leads",     description: "Presentación estructurada de servicios y flujos de contacto enfocados en la captación de clientes." },
+            { title: "Experiencia Responsiva",  description: "Experiencia de usuario optimizada para escritorio, tablet y dispositivos móviles." },
+            { title: "Base SEO",                description: "Construido con visibilidad en motores de búsqueda y buenas prácticas de accesibilidad." },
+          ],
+          status: "Producción",
+        },
+        {
+          title:           "Angular CRM Platform",
+          category:        "Plataforma CRM",
+          description:     "Aplicación CRM moderna construida con Angular 20, con autenticación, control de acceso basado en roles, flujos Kanban, dashboards y gestión de estado reactiva.",
+          fullDescription: "Mini Personal CRM es un proyecto de portafolio desarrollado para mostrar arquitectura Angular moderna y prácticas de ingeniería frontend. La aplicación centraliza la gestión de clientes, seguimiento de ventas, organización de tareas y administración de usuarios en una interfaz responsiva orientada a negocios. El proyecto se enfoca en escalabilidad, mantenibilidad y patrones modernos de Angular, incluyendo componentes standalone, signals, lazy loading, autenticación basada en roles y flujos de datos reactivos con RxJS.",
+          imageAlt:        "Panel CRM Angular con contactos, pipeline de ventas Kanban, analíticas, autenticación y control de acceso basado en roles.",
+          specs: [
+            { title: "Autenticación",       description: "Autenticación JWT, guardas de rutas, interceptores HTTP y control de acceso basado en roles." },
+            { title: "Flujos CRM",          description: "Contactos, oportunidades, tareas, pipelines Kanban y gestión de flujos de trabajo empresariales." },
+            { title: "Angular Moderno",     description: "Construido con Angular 20 usando Signals, Componentes Standalone, estrategia OnPush y lazy loading." },
+            { title: "Panel de Analíticas", description: "Gráficos interactivos y métricas de negocio usando Chart.js y flujos de datos reactivos." },
+          ],
+          status: "Demo en Vivo",
+        },
+      ],
+    },
+    explorations: {
+      sectionTitle: "Exploraciones Actuales",
+      items: [
+        {
+          title: "React & Next.js",
+          description: "Aprendiendo el ecosistema moderno de React para ampliar oportunidades en roles frontend globales.",
+        },
+        {
+          title: "Testing Frontend",
+          description: "Aprendiendo Jest y Cypress para mejorar la confiabilidad, mantenibilidad y confianza en el despliegue de aplicaciones.",
+        },
+        {
+          title: "Aplicaciones con IA",
+          description: "Explorando integraciones de LLM, agentes de IA y flujos de trabajo inteligentes para aplicaciones de negocio modernas.",
+        },
+        {
+          title: "Arquitectura de Software",
+          description: "Mejorando la escalabilidad de aplicaciones mediante diseño modular, arquitectura limpia y patrones de frontend mantenibles.",
+        },
+      ],
     },
     contact: {
       sectionTitle: "Establecer Conexión",
