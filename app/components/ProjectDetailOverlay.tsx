@@ -7,9 +7,10 @@ import type { Project } from "./ProjectsSection";
 interface Props {
   project: Project;
   onClose: () => void;
+  onPrivateModalOpen: (type: "private-repo" | "private-live") => void;
 }
 
-export default function ProjectDetailOverlay({ project, onClose }: Props) {
+export default function ProjectDetailOverlay({ project, onClose, onPrivateModalOpen }: Props) {
   // Close on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -124,20 +125,46 @@ export default function ProjectDetailOverlay({ project, onClose }: Props) {
           <div className="lg:col-span-4 flex flex-col gap-8 border-t lg:border-t-0 lg:border-l border-surface-container-highest pt-8 lg:pt-0 lg:pl-8">
             {/* Actions */}
             <div className="flex flex-col gap-3">
-              <a
-                href={project.liveUrl}
-                className="w-full bg-primary text-on-primary py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-transparent hover:text-primary border border-primary transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-sm">open_in_new</span>
-                Deploy Live Instance
-              </a>
-              <a
-                href={project.githubUrl}
-                className="w-full bg-transparent text-on-surface border border-surface-container-highest py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2"
-              >
-                <span className="material-symbols-outlined text-sm">code</span>
-                View Source Repository
-              </a>
+              {project.liveUrl === "#" ? (
+                <button
+                  type="button"
+                  onClick={() => onPrivateModalOpen("private-live")}
+                  className="w-full bg-primary text-on-primary py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-transparent hover:text-primary border border-primary transition-all flex items-center justify-center gap-2"
+                >
+                  <span className="material-symbols-outlined text-sm">open_in_new</span>
+                  Deploy Live Instance
+                </button>
+              ) : (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-primary text-on-primary py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-transparent hover:text-primary border border-primary transition-all flex items-center justify-center gap-2"
+                >
+                  <span className="material-symbols-outlined text-sm">open_in_new</span>
+                  Deploy Live Instance
+                </a>
+              )}
+              {project.privateRepo ? (
+                <button
+                  type="button"
+                  onClick={() => onPrivateModalOpen("private-repo")}
+                  className="w-full bg-transparent text-on-surface border border-surface-container-highest py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2"
+                >
+                  <span className="material-symbols-outlined text-sm">code</span>
+                  View Source Repository
+                </button>
+              ) : (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-transparent text-on-surface border border-surface-container-highest py-3 px-6 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-all flex items-center justify-center gap-2"
+                >
+                  <span className="material-symbols-outlined text-sm">code</span>
+                  View Source Repository
+                </a>
+              )}
             </div>
 
             {/* Tech Stack */}

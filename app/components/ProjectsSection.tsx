@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import FadeIn, { StaggerContainer, StaggerItem } from "./animations/FadeIn";
 import ProjectDetailOverlay from "./ProjectDetailOverlay";
+import PrivateAccessModal from "./PrivateAccessModal";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../lib/translations";
 
@@ -23,26 +24,29 @@ export type Project = {
   liveUrl: string;
   status: string;
   version: string;
+  privateRepo?: boolean;
 };
 
 const projectsMeta = [
   {
-    image:      "/projects/alta-montana-erp.webp",
-    tags:       ["Angular", "TypeScript", "RxJS", "REST API", "ERP", "Business Management"],
-    filter:     ["Angular", "TypeScript"],
-    specIcons:  ["user_attributes", "package", "build", "receipt"],
-    githubUrl:  "#",
-    liveUrl:    "#",
-    version:    "v1.0.0",
+    image:       "/projects/alta-montana-erp.webp",
+    tags:        ["Angular", "TypeScript", "RxJS", "REST API", "ERP", "Business Management"],
+    filter:      ["Angular", "TypeScript"],
+    specIcons:   ["user_attributes", "package", "build", "receipt"],
+    githubUrl:   "#",
+    liveUrl:     "#",
+    version:     "v1.0.0",
+    privateRepo: true,
   },
   {
-    image:      "/projects/gestores-empresas.webp",
-    tags:       ["NextJS", "TypeScript", "React", "Responsive Design", "SEO", "Business Website", "Corporate Platform"],
-    filter:     ["NextJS", "React", "TypeScript"],
-    specIcons:  ["corporate_fare", "user_attributes", "monitor", "search"],
-    githubUrl:  "#",
-    liveUrl:    "https://gestoresempresas.com/",
-    version:    "v1.0.0",
+    image:       "/projects/gestores-empresas.webp",
+    tags:        ["NextJS", "TypeScript", "React", "Responsive Design", "SEO", "Business Website", "Corporate Platform"],
+    filter:      ["NextJS", "React", "TypeScript"],
+    specIcons:   ["corporate_fare", "user_attributes", "monitor", "search"],
+    githubUrl:   "#",
+    liveUrl:     "https://gestoresempresas.com/",
+    version:     "v1.0.0",
+    privateRepo: true,
   },
   {
     image:      "/projects/mini-personal-crm.webp",
@@ -65,6 +69,7 @@ export default function ProjectsSection() {
   }));
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [activeModal, setActiveModal] = useState<"private-repo" | "private-live" | null>(null);
 
   const filtered =
     activeFilter === "All"
@@ -225,30 +230,48 @@ export default function ProjectsSection() {
 
                         {/* Actions */}
                         <div className="flex gap-4 mt-auto">
-                          <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="border border-primary text-primary px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-colors inline-flex items-center gap-2"
-                          >
-                            <span className="material-symbols-outlined text-sm">
-                              open_in_new
-                            </span>
-                            {t.liveDeploy}
-                          </a>
-                          <a
-                            href={project.githubUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            className="border border-outline-variant text-on-background px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-on-background transition-colors inline-flex items-center gap-2"
-                          >
-                            <span className="material-symbols-outlined text-sm">
-                              code
-                            </span>
-                            {t.source}
-                          </a>
+                          {project.liveUrl === "#" ? (
+                            <button
+                              type="button"
+                              onClick={(e) => { e.stopPropagation(); setActiveModal("private-live"); }}
+                              className="border border-primary text-primary px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-colors inline-flex items-center gap-2"
+                            >
+                              <span className="material-symbols-outlined text-sm">open_in_new</span>
+                              {t.liveDeploy}
+                            </button>
+                          ) : (
+                            <a
+                              href={project.liveUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="border border-primary text-primary px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-colors inline-flex items-center gap-2"
+                            >
+                              <span className="material-symbols-outlined text-sm">open_in_new</span>
+                              {t.liveDeploy}
+                            </a>
+                          )}
+                          {project.privateRepo ? (
+                            <button
+                              type="button"
+                              onClick={(e) => { e.stopPropagation(); setActiveModal("private-repo"); }}
+                              className="border border-outline-variant text-on-background px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-on-background transition-colors inline-flex items-center gap-2"
+                            >
+                              <span className="material-symbols-outlined text-sm">code</span>
+                              {t.source}
+                            </button>
+                          ) : (
+                            <a
+                              href={project.githubUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              className="border border-outline-variant text-on-background px-4 py-2 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-on-background transition-colors inline-flex items-center gap-2"
+                            >
+                              <span className="material-symbols-outlined text-sm">code</span>
+                              {t.source}
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -260,7 +283,7 @@ export default function ProjectsSection() {
         </AnimatePresence>
 
         {/* Load more — only when projects are visible */}
-        {filtered.length > 0 && (
+        {filtered.length > 4 && (
           <div className="flex justify-center">
             <button className="border border-outline-variant text-on-background px-8 py-4 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-primary hover:text-primary transition-colors inline-flex items-center gap-2">
               {t.loadMore}
@@ -278,6 +301,17 @@ export default function ProjectsSection() {
           <ProjectDetailOverlay
             project={selectedProject}
             onClose={() => setSelectedProject(null)}
+            onPrivateModalOpen={(type) => setActiveModal(type)}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Private access modals */}
+      <AnimatePresence>
+        {activeModal && (
+          <PrivateAccessModal
+            type={activeModal}
+            onClose={() => setActiveModal(null)}
           />
         )}
       </AnimatePresence>

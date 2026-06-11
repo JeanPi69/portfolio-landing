@@ -75,7 +75,7 @@ export default function MatrixIntro({ onComplete }: MatrixIntroProps) {
     draw();
 
     // Begin exit after 3s of rain
-    const exitTimer = setTimeout(() => setVisible(false), 3000);
+    const exitTimer = setTimeout(() => setVisible(false), 2000);
 
     return () => {
       cancelAnimationFrame(animId);
@@ -90,7 +90,7 @@ export default function MatrixIntro({ onComplete }: MatrixIntroProps) {
         <motion.div
           className="fixed inset-0 z-[9999] bg-[#101415] overflow-hidden"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           {/* Canvas rain */}
           <canvas ref={canvasRef} className="block" />
@@ -123,7 +123,7 @@ export default function MatrixIntro({ onComplete }: MatrixIntroProps) {
                   className="absolute inset-y-0 left-0 bg-primary"
                   initial={{ width: "0%" }}
                   animate={{ width: "100%" }}
-                  transition={{ delay: 0.8, duration: 2.0, ease: "easeInOut" }}
+                  transition={{ delay: 0.8, duration: 1.5, ease: "easeInOut" }}
                 />
               </div>
 
@@ -131,7 +131,7 @@ export default function MatrixIntro({ onComplete }: MatrixIntroProps) {
                 className="font-[family-name:var(--font-space-grotesk)] text-on-surface-variant text-[10px] tracking-[0.3em] uppercase"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 1, 1, 0] }}
-                transition={{ delay: 0.8, duration: 2.2, times: [0, 0.1, 0.8, 1] }}
+                transition={{ delay: 0.8, duration: 1.5, times: [0, 0.1, 0.8, 1] }}
               >
                 LOADING PORTFOLIO...
               </motion.p>

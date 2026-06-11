@@ -73,7 +73,8 @@ export default function HeroSection() {
                   {t.ctaContact}
                 </a>
                 <a
-                  href="#"
+                  href="/Walter_Jean_Pierre_Huapaya_CV.pdf"
+                  download
                   className="border border-outline-variant text-on-background px-6 py-3 font-[family-name:var(--font-space-grotesk)] text-xs font-bold tracking-widest uppercase hover:border-on-surface-variant transition-colors inline-flex items-center gap-2"
                 >
                   <span className="material-symbols-outlined text-sm">download</span>

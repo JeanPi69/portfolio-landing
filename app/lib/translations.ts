@@ -100,8 +100,12 @@ export const translations = {
       emptyBody:       "yielded no architectural constructs within the current repository parameters.",
       resetQuery:      "Reset Query",
       statusLabel:     "STATUS: NULL_SET",
-      liveDeploy:      "Live Deploy",
-      source:          "Source",
+      liveDeploy:               "Live Deploy",
+      source:                   "Source",
+      privateRepoStatus:        "Repository Status: Private Repository",
+      privateRepoMessage:       "This project contains proprietary business logic and client-specific implementations that cannot be publicly disclosed.",
+      privateLiveStatus:        "Live Access Restricted",
+      privateLiveMessage:       "For security and NDA compliance, the live environment for this system cannot be publicly accessed. Please contact me directly for a private demo.",
       projectList: [
         {
           title:           "Alta Montaña ERP",
@@ -115,7 +119,7 @@ export const translations = {
             { title: "Workshop Operations", description: "Service orders, maintenance tracking, and workshop workflow management." },
             { title: "Sales & Billing",    description: "Electronic invoicing, sales receipts, notes of sale, and financial transaction management." },
           ],
-          status: "Beta - Pending Client Approval",
+          status: "Production",
         },
         {
           title:           "Gestores Empresas",
@@ -301,8 +305,12 @@ export const translations = {
       emptyBody:       "no produjo construcciones arquitectónicas en los parámetros del repositorio actual.",
       resetQuery:      "Restablecer Filtros",
       statusLabel:     "ESTADO: SIN_RESULTADOS",
-      liveDeploy:      "Ver En Vivo",
-      source:          "Código",
+      liveDeploy:               "Ver En Vivo",
+      source:                   "Código",
+      privateRepoStatus:        "Estado del Repositorio: Repositorio Privado",
+      privateRepoMessage:       "Este proyecto contiene lógica de negocio propietaria e implementaciones específicas del cliente que no pueden ser divulgadas públicamente.",
+      privateLiveStatus:        "Acceso en Vivo Restringido",
+      privateLiveMessage:       "Por razones de seguridad y cumplimiento de NDA, el entorno en vivo de este sistema no puede ser accedido públicamente. Contactame directamente para una demo privada.",
       projectList: [
         {
           title:           "Alta Montaña ERP",
@@ -316,7 +324,7 @@ export const translations = {
             { title: "Operaciones de Taller", description: "Órdenes de servicio, seguimiento de mantenimiento y gestión del flujo de trabajo del taller." },
             { title: "Ventas y Facturación",  description: "Facturación electrónica, boletas de venta, notas de venta y gestión de transacciones financieras." },
           ],
-          status: "Beta - Pendiente de Aprobación del Cliente",
+          status: "Producción",
         },
         {
           title:           "Gestores Empresas",
