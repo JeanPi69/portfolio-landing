@@ -99,7 +99,7 @@ export default function ContactSection() {
                 Github
               </a>
               <a
-                href="https://www.linkedin.com/in/walter-jean-pierre-huapaya-ch%C3%A1vez-51ba479b/" target="_blank" rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/walter-jean-pierre-huapaya-ch%C3%A1vez/" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-4 text-on-surface-variant hover:text-primary transition-colors font-[family-name:var(--font-space-grotesk)] text-sm"
               >
                 <span className="material-symbols-outlined border border-outline-variant p-2">group</span>

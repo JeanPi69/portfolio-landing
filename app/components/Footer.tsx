@@ -9,7 +9,7 @@ const socialLinks = [
   {
     label: "LinkedIn",
     icon: "group",
-    href: "https://www.linkedin.com/in/walter-jean-pierre-huapaya-ch%C3%A1vez-51ba479b/",
+    href: "https://www.linkedin.com/in/walter-jean-pierre-huapaya-ch%C3%A1vez/",
     external: true,
   },
   { label: "Terminal", icon: "terminal", href: "#contact", external: false },
